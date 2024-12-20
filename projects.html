@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio-Priyanshi Dixit</title>
+  <link rel="stylesheet" href="intro.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+</head>
+
+<body>
+  <nav>
+    <div class="logo">
+      <h1>Portfolio</h1>
+    </div>
+    <div class="openmenu"><i class='bx bx-menu'></i></div>
+    <ul class="mainmenu">
+      <li><a href="home.html" class="nav-link">Home</a></li>
+      <li><a href="about.html" class="nav-link">About</a></li>
+      <li><a href="resume.html" class="nav-link">Resume</a></li>
+      <li><a href="services.html" class="nav-link">Services</a></li>
+      <li><a href="projects.html" class="nav-link">Projects</a></li>
+
+      <div class="closemenu"><i class='bx bx-x'></i></div>
+      <span class="icons">
+        <a href="https://www.instagram.com/priyanshi_dixiit_0110/"><i class='bx bxl-instagram'></i></a>
+        <a href="https://www.linkedin.com/in/priyanshi-dixit-134863282/"><i class='bx bxl-linkedin-square'></i></a>
+        <a href="https://github.com/Priyanshi-dixit1"><i class='bx bxl-github'></i></a>
+        <a href="https://x.com/PriyanshiD48066"><i class='bx bxl-twitter'></i></a>
+      </span>
+    </ul>
+  </nav>
+  <section class="portfolio">
+    <h1>Latest <span>Projects</span></h1>
+    <div class="portfolio-container">
+      <div class="portfolio-box">
+        <img src="cover_page.jpg" alt="">
+        <div class="portfolio-layer">
+          <h2>Ui/Ux Design</h2>
+          <p>Restaurant Menu</p>
+          <a href="https://www.figma.com/design/g6VxlvSg3uVKkuT2wSWtsY/Untitled?node-id=0-1&t=puiDJBPjWaY5e4gG-1">
+          <i class='bx bx-link-external'></i></a>
+        </div>
+       </div>
+      <!-- <div class="portfolio-box">
+        <img src="p1.jpg" alt="">
+        <div class="portfolio-layer">
+          <h2>App Design</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+          <i class='bx bx-link-external'></i>
+        </div>
+      </div> -->
+      <!-- <div class="portfolio-box">
+        <img src="p3.webp" alt="">
+        <div class="portfolio-layer">
+          <h2>UI/UX Design</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+          <i class='bx bx-link-external'></i>
+        </div>
+      </div> -->
+      <!-- <div class="portfolio-box">
+        <img src="p4.png" alt="">
+        <div class="portfolio-layer">
+          <h2>UI/UX Design</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+          <i class='bx bx-link-external'></i>
+        </div>
+      </div> -->
+      <!-- <div class="portfolio-box">
+        <img src="p2.jpeg" alt="">
+        <div class="portfolio-layer">
+          <h2>Web Design</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+          <i class='bx bx-link-external'></i>
+        </div>
+      </div> -->
+      <!-- <div class="portfolio-box">
+        <img src="p5.jpg" alt="">
+        <div class="portfolio-layer">
+          <h2>Web Design</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+          <i class='bx bx-link-external'></i>
+        </div>
+      </div> -->
+    </div>
+  </section>
+  <script>
+    const mainmenu = document.querySelector('.mainmenu');
+    const closemenu = document.querySelector('.closemenu');
+    const openmenu = document.querySelector('.openmenu');
+
+
+    openmenu.addEventListener('click', show);
+    closemenu.addEventListener('click', close);
+
+    function show() {
+      mainmenu.style.display = 'flex';
+      mainmenu.style.top = '0';
+    }
+    function close() {
+      mainmenu.style.top = '-100%';
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+      const currentPath = window.location.pathname.split('/').pop();
+      const navLinks = document.querySelectorAll('.nav-link');
+
+      navLinks.forEach(link => {
+        const linkPath = link.getAttribute('href');
+        if (currentPath === linkPath) {
+          link.classList.add('active');
+        }
+      });
+    });
+
+  </script>
+</body>
+
+</html>
